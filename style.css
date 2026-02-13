@@ -1,0 +1,101 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    transition: 0.3s;
+}
+
+.logo {
+    color: #a855f7;
+    font-weight: 700;
+}
+
+.nav-link {
+    display: block;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(168,85,247,0.2);
+    color: white;
+}
+
+/* Main */
+.main-content {
+    margin-left: 240px;
+}
+
+/* Hero */
+.hero-section {
+    background: linear-gradient(to right, rgba(124,58,237,0.7), rgba(30,41,59,0.9)),
+                url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+/* Buttons */
+.bg-purple {
+    background-color: #7c3aed !important;
+}
+
+.btn-gradient {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+/* Cards */
+.podcast-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.podcast-card img {
+    border-radius: 15px;
+}
+
+.podcast-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Audio Player */
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(15,23,42,0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .sidebar {
+        left: -240px;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
